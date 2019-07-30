@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quizup</string>
+    <string name="quizes">Quizes</string>
+    <string name="select_a_question">Select a quiz</string>
+    <string name="select_a_category">Select a category</string>
+    <string name="playRandomly">Play with stranger</string>
+    <string name="playFriend">Play with friend</string>
+    <string name="sample_question">Which country won the 1970 World Cup Finals ?
+    </string>
+    <string name="playBot">Play with bot</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connect_dialog">Please wait while we find the best match for your challenge</string>
+    <string name="start_swag_quiz">Start Swag Quiz</string>
+</resources>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".FinalPackage.Fragments.QuizFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/root_action_bar"
+            android:background="@color/richmaroon"
+    >
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:text="Quiz MW6 1"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/quizIdTextView"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Swag Quizzes"
+                    android:textColor="#e5e5e5"
+                    android:layout_below="@id/quizIdTextView"
+            />
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_close_black"
+                    android:layout_margin="16dp"
+                    android:layout_centerVertical="true"
+            />
+
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+            android:layout_below="@+id/root_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/quiz_gradient_background"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+    >
+
+        <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:progressDrawable="@drawable/progress_bar_drawable"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/questionTimeLeftProgressBar"
+                android:progress="800"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="24dp"
+                android:max="1000"
+                android:layout_marginBottom="21dp"
+        />
+
+
+        <LinearLayout
+                android:id="@+id/profilesLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/questionTimeLeftProgressBar"
+                android:layout_marginBottom="17dp"
+        >
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+            >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/myProfilePicture"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerVertical="true"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        android:src="@drawable/res"
+                        android:layout_marginRight="5dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/myname"
+                        android:layout_toRightOf="@id/myProfilePicture"
+                        android:text="Me"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="2dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/mypoints"
+                        android:layout_toRightOf="@id/myProfilePicture"
+                        android:text="1,300"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="2dp"
+                        android:layout_below="@id/myname"
+                        android:drawableLeft="@drawable/ic_swagpoints"
+                        android:drawablePadding="5dp"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/myscore"
+                        android:layout_toRightOf="@id/myProfilePicture"
+                        android:text="Score 0/6"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="2dp"
+                        android:layout_below="@id/mypoints"
+                />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+            >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/oppProfilePicture"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerVertical="true"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="2dp"
+                        android:src="@drawable/res"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/oppname"
+                        android:text="Uzamaki Naruto"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="2dp"
+                        android:layout_toLeftOf="@id/oppProfilePicture"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/opppoints"
+                        android:text="6,500"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="2dp"
+                        android:layout_below="@id/oppname"
+                        android:drawableRight="@drawable/ic_swagpoints"
+                        android:drawablePadding="5dp"
+                        android:layout_toLeftOf="@id/oppProfilePicture"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/oppscore"
+                        android:text="Score 1/6"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="2dp"
+                        android:layout_below="@id/opppoints"
+                        android:layout_toLeftOf="@id/oppProfilePicture"
+                />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-light"
+                android:text="Question 1/6"
+                android:textColor="@android:color/white"
+                android:id="@+id/questionNumberTextView"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/profilesLinearLayout"
+
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionNumberTextView"
+                android:id="@+id/questionTextView"
+                android:text="@string/sample_question"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/questionTextView"
+                android:id="@+id/lin2"
+        >
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/optionA"
+                    android:text="Option A"
+                    android:layout_weight="1"
+                    android:background="@drawable/option_button_style"
+                    android:layout_margin="4dp"
+                    android:textColor="#6200ee"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_checked_blue"/>
+
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/optionB"
+                    android:text="Option B"
+                    android:layout_weight="1"
+                    android:background="@drawable/option_button_style"
+                    android:layout_margin="4dp"
+                    android:textColor="#6200ee"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_checked_blue"
+            />
+
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/optionC"
+                    android:text="Option C"
+                    android:layout_weight="1"
+                    android:background="@drawable/option_button_style"
+                    android:layout_margin="4dp"
+                    android:textColor="#6200ee"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_checked_blue"/>
+            />
+
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/optionD"
+                    android:text="Option D"
+                    android:layout_weight="1"
+                    android:background="@drawable/option_button_style"
+                    android:layout_margin="4dp"
+                    android:textColor="#6200ee"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_checked_blue"/>
+            />
+
+
+        </LinearLayout>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/temp_textView"
+                android:layout_below="@+id/lin2"
+                android:layout_margin="20dp"
+        />
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/global_timer"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+        />
+
+    </RelativeLayout>
+
+</RelativeLayout>

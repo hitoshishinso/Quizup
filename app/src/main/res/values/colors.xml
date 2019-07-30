@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#bc2a6d</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="greyBackColor">#D8D8D8</color>
+    <color name="backprimary">#010101</color>
+
+
+    <color name="darkgolden">#c38e00</color>
+    <color name="richmaroon">#bc2a6d</color>
+    <color name="indigo">#641098</color>
+
+</resources>
